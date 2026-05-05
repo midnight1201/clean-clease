@@ -1,4 +1,4 @@
-package net.midnight.cleanchemistry;
+package net.midnight.clean_n_cleanse;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package net.midnight.cleanchemistry;
+package net.midnight.clean_n_cleanse;
 
 import org.slf4j.Logger;
 
@@ -15,14 +15,14 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(CreateSponges.MOD_ID)
-public class CreateSponges {
-    public static final String MOD_ID = "cleanchemistry";
+@Mod(ChemistryMod.MOD_ID)
+public class ChemistryMod {
+    public static final String MOD_ID = "clean_n_cleanse";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public CreateSponges(IEventBus modEventBus, ModContainer modContainer) {
+    public ChemistryMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
