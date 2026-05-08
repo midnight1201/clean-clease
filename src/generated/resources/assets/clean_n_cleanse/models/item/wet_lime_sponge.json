@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "clean_n_cleanse:item/wet_lime_sponge"
+  }
+}

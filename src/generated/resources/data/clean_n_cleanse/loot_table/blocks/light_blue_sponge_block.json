@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "clean_n_cleanse:light_blue_sponge_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "clean_n_cleanse:blocks/light_blue_sponge_block"
+}

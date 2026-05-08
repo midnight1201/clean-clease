@@ -1,0 +1,32 @@
+{
+  "item.clean_n_cleanse.white_sponge": "White Sponge",
+  "item.clean_n_cleanse.wet_white_sponge": "Wet White Sponge",
+
+  "item.clean_n_cleanse.red_sponge": "Red Sponge",
+  "item.clean_n_cleanse.wet_red_sponge": "Wet Red Sponge",
+
+  "item.clean_n_cleanse.yellow_sponge": "Yellow Sponge",
+  "item.clean_n_cleanse.wet_yellow_sponge": "Wet Yellow Sponge",
+
+  "item.clean_n_cleanse.lime_sponge": "Lime Sponge",
+  "item.clean_n_cleanse.wet_lime_sponge": "Wet Lime Sponge",
+
+  "item.clean_n_cleanse.light_blue_sponge": "Light Blue Sponge",
+  "item.clean_n_cleanse.wet_light_blue_sponge": "Wet Light Blue Sponge",
+
+
+
+  "block.clean_n_cleanse.white_sponge_block": "White Sponge Block",
+  "block.clean_n_cleanse.wet_white_sponge_block": "Wet White Sponge Block",
+
+  "block.clean_n_cleanse.red_sponge_block": "Red Sponge Block",
+  "block.clean_n_cleanse.wet_red_sponge_block": "Wet Red Sponge Block",
+
+  "block.clean_n_cleanse.lime_sponge_block": "Lime Sponge Block",
+  "block.clean_n_cleanse.wet_lime_sponge_block": "Wet Lime Sponge Block",
+
+  "block.clean_n_cleanse.light_blue_sponge_block": "Light Blue Sponge Block",
+  "block.clean_n_cleanse.wet_light_blue_sponge_block": "Wet Light Blue Sponge Block",
+
+  "creativetab.chemistrymod.mod_items": "Clean & Cleanse"
+}
