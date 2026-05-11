@@ -43,14 +43,18 @@ public class CustomSpongeItem extends Item {
                     // Play sound at the block position
                     world.playSound(null, pos, SoundEvents.SPONGE_ABSORB, SoundSource.PLAYERS, 1.0F, 1.0F);
 
-                    // Consume the item
-                    itemStack.shrink(1);
-
-                    // Give the player the transformed item
+                    // Create the transformed item
                     ItemStack transformedItem = new ItemStack(transformItem);
-                    if (!player.addItem(transformedItem)) {
-                        // If inventory is full, drop the item at player's feet
+
+                    // Try to add to player inventory
+                    if (!player.getInventory().add(transformedItem)) {
+                        // If inventory is full, drop the wet sponge on ground
                         player.drop(transformedItem, false);
+                    }
+
+                    // Consume the dry sponge (unless in creative mode)
+                    if (!player.isCreative()) {
+                        itemStack.shrink(1);
                     }
                 }
                 return InteractionResultHolder.sidedSuccess(itemStack, world.isClientSide());
