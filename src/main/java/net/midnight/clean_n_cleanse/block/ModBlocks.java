@@ -1,6 +1,8 @@
 package net.midnight.clean_n_cleanse.block;
 
 import net.midnight.clean_n_cleanse.ChemistryMod;
+import net.midnight.clean_n_cleanse.block.custom.CustomSpongeBlock;
+import net.midnight.clean_n_cleanse.block.custom.CustomWetSpongeBlock;
 import net.midnight.clean_n_cleanse.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -18,14 +20,14 @@ public class ModBlocks {
             DeferredRegister.createBlocks(ChemistryMod.MOD_ID);
 
     public static final DeferredBlock<Block> WHITE_SPONGE_BLOCK = registerBlock("white_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
+            () -> new CustomSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
     public static final DeferredBlock<Block> WET_WHITE_SPONGE_BLOCK = registerBlock("wet_white_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
+            () -> new CustomWetSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
 
     public static final DeferredBlock<Block> RED_SPONGE_BLOCK = registerBlock("red_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
+            () -> new CustomSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
     public static final DeferredBlock<Block> WET_RED_SPONGE_BLOCK = registerBlock("wet_red_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
+            () -> new CustomWetSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
 
     public static final DeferredBlock<Block> LIME_SPONGE_BLOCK = registerBlock("lime_sponge_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
