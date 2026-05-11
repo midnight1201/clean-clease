@@ -1,6 +1,7 @@
 package net.midnight.clean_n_cleanse.block.custom;
 
-import net.midnight.clean_n_cleanse.block.ModBlocks;
+import net.midnight.clean_n_cleanse.block.custom.util.SpongeColor;
+import net.midnight.clean_n_cleanse.block.custom.util.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -12,12 +13,14 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 
-public class RedSpongeBlock extends SpongeBlock {
+public class CustomSpongeBlock extends SpongeBlock {
     private static final Direction[] ALL_DIRECTIONS = Direction.values();
-    public RedSpongeBlock(Properties properties) {
-        super(properties);
-    }
 
+    private SpongeColor color;
+    public CustomSpongeBlock(Properties properties, SpongeColor colour) {
+        super(properties);
+        this.color = color;
+    }
 
     @Override
     protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
@@ -32,11 +35,12 @@ public class RedSpongeBlock extends SpongeBlock {
     @Override
     protected void tryAbsorbWater(Level level, BlockPos pos) {
         if(removeWaterBreadthFirstSearch(level, pos)){
-            level.setBlock(pos, ModBlocks.WET_RED_SPONGE_BLOCK.get().defaultBlockState(), 2);
+            level.setBlock(pos, Util.SPONGES.get(color).getB().get().defaultBlockState(), 2);
             level.playSound(null, pos, SoundEvents.SPONGE_ABSORB, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
     }
 
+    //copied in full due to being private
     private boolean removeWaterBreadthFirstSearch(Level level, BlockPos pos) {
         BlockState spongeState = level.getBlockState(pos);
         return BlockPos.breadthFirstTraversal(pos, 6, 65, (p_277519_, p_277492_) -> {
