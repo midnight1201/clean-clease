@@ -13,19 +13,19 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.WHITE_SPONGE.get());
         basicItem(ModItems.WET_WHITE_SPONGE.get());
+        basicItem(ModItems.WHITE_SPONGE.get());
 
-        basicItem(ModItems.RED_SPONGE.get());
         basicItem(ModItems.WET_RED_SPONGE.get());
+        basicItem(ModItems.RED_SPONGE.get());
 
-        basicItem(ModItems.YELLOW_SPONGE.get());
         basicItem(ModItems.WET_YELLOW_SPONGE.get());
+        basicItem(ModItems.YELLOW_SPONGE.get());
 
-        basicItem(ModItems.LIME_SPONGE.get());
         basicItem(ModItems.WET_LIME_SPONGE.get());
+        basicItem(ModItems.LIME_SPONGE.get());
 
-        basicItem(ModItems.LIGHT_BLUE_SPONGE.get());
         basicItem(ModItems.WET_LIGHT_BLUE_SPONGE.get());
+        basicItem(ModItems.LIGHT_BLUE_SPONGE.get());
     }
 }
