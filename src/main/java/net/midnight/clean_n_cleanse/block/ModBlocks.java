@@ -1,8 +1,7 @@
 package net.midnight.clean_n_cleanse.block;
 
 import net.midnight.clean_n_cleanse.ChemistryMod;
-import net.midnight.clean_n_cleanse.block.custom.CustomSpongeBlock;
-import net.midnight.clean_n_cleanse.block.custom.CustomWetSpongeBlock;
+import net.midnight.clean_n_cleanse.block.custom.*;
 import net.midnight.clean_n_cleanse.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -20,24 +19,24 @@ public class ModBlocks {
             DeferredRegister.createBlocks(ChemistryMod.MOD_ID);
 
     public static final DeferredBlock<Block> WHITE_SPONGE_BLOCK = registerBlock("white_sponge_block",
-            () -> new CustomSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
+            () -> new WhiteSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
     public static final DeferredBlock<Block> WET_WHITE_SPONGE_BLOCK = registerBlock("wet_white_sponge_block",
-            () -> new CustomWetSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
+            () -> new WetWhiteSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
 
     public static final DeferredBlock<Block> RED_SPONGE_BLOCK = registerBlock("red_sponge_block",
-            () -> new CustomSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
+            () -> new RedSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
     public static final DeferredBlock<Block> WET_RED_SPONGE_BLOCK = registerBlock("wet_red_sponge_block",
-            () -> new CustomWetSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
+            () -> new WetRedSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
 
     public static final DeferredBlock<Block> LIME_SPONGE_BLOCK = registerBlock("lime_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
+            () -> new LimeSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
     public static final DeferredBlock<Block> WET_LIME_SPONGE_BLOCK = registerBlock("wet_lime_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
+            () -> new WetLimeSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
 
     public static final DeferredBlock<Block> LIGHT_BLUE_SPONGE_BLOCK = registerBlock("light_blue_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
+            () -> new LightBlueSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPONGE)));
     public static final DeferredBlock<Block> WET_LIGHT_BLUE_SPONGE_BLOCK = registerBlock("wet_light_blue_sponge_block",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
+            () -> new WetLightBlueSpongeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WET_SPONGE)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

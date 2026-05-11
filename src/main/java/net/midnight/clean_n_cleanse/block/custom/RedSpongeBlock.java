@@ -12,9 +12,9 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 
-public class CustomSpongeBlock extends SpongeBlock {
+public class RedSpongeBlock extends SpongeBlock {
     private static final Direction[] ALL_DIRECTIONS = Direction.values();
-    public CustomSpongeBlock(Properties properties) {
+    public RedSpongeBlock(Properties properties) {
         super(properties);
     }
 
@@ -32,7 +32,7 @@ public class CustomSpongeBlock extends SpongeBlock {
     @Override
     protected void tryAbsorbWater(Level level, BlockPos pos) {
         if(removeWaterBreadthFirstSearch(level, pos)){
-            level.setBlock(pos, ModBlocks.WET_WHITE_SPONGE_BLOCK.get().defaultBlockState(), 2);
+            level.setBlock(pos, ModBlocks.WET_RED_SPONGE_BLOCK.get().defaultBlockState(), 2);
             level.playSound(null, pos, SoundEvents.SPONGE_ABSORB, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
     }
