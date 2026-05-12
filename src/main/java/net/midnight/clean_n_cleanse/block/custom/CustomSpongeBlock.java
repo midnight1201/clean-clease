@@ -17,7 +17,7 @@ public class CustomSpongeBlock extends SpongeBlock {
     private static final Direction[] ALL_DIRECTIONS = Direction.values();
 
     private SpongeColor color;
-    public CustomSpongeBlock(Properties properties, SpongeColor colour) {
+    public CustomSpongeBlock(Properties properties, SpongeColor color) {
         super(properties);
         this.color = color;
     }
@@ -40,7 +40,6 @@ public class CustomSpongeBlock extends SpongeBlock {
         }
     }
 
-    //copied in full due to being private
     private boolean removeWaterBreadthFirstSearch(Level level, BlockPos pos) {
         BlockState spongeState = level.getBlockState(pos);
         return BlockPos.breadthFirstTraversal(pos, 6, 65, (p_277519_, p_277492_) -> {

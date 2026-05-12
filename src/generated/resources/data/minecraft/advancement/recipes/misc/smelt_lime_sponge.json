@@ -3,15 +3,15 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "clean_n_cleanse:wet_light_blue_sponge_block"
+        "recipe": "minecraft:smelt_lime_sponge"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_wet_light_blue_sponge": {
+    "has_wet_lime_sponge": {
       "conditions": {
         "items": [
           {
-            "items": "clean_n_cleanse:wet_light_blue_sponge"
+            "items": "clean_n_cleanse:wet_lime_sponge_block"
           }
         ]
       },
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_wet_light_blue_sponge"
+      "has_wet_lime_sponge"
     ]
   ],
   "rewards": {
     "recipes": [
-      "clean_n_cleanse:wet_light_blue_sponge_block"
+      "minecraft:smelt_lime_sponge"
     ]
   }
 }

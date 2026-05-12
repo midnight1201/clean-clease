@@ -1,0 +1,15 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:sponge"
+    }
+  ],
+  "processing_time": 20,
+  "results": [
+    {
+      "count": 9,
+      "id": "clean_n_cleanse:yellow_sponge"
+    }
+  ]
+}

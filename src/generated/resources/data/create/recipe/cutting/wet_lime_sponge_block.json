@@ -1,0 +1,15 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "clean_n_cleanse:wet_lime_sponge_block"
+    }
+  ],
+  "processing_time": 20,
+  "results": [
+    {
+      "count": 9,
+      "id": "clean_n_cleanse:wet_lime_sponge"
+    }
+  ]
+}

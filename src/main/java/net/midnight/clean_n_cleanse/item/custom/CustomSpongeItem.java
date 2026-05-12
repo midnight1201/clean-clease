@@ -27,32 +27,23 @@ public class CustomSpongeItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
         ItemStack itemStack = player.getItemInHand(hand);
 
-        // Get the block the player is looking at
         BlockHitResult hit = getPlayerPOVHitResult(world, player, ClipContext.Fluid.SOURCE_ONLY);
 
         if (hit.getType() == BlockHitResult.Type.BLOCK) {
             BlockPos pos = hit.getBlockPos();
             BlockState state = world.getBlockState(pos);
 
-            // Check if it's a water source block
             if (state.getFluidState().getType() == Fluids.WATER && state.getFluidState().isSource()) {
                 if (!world.isClientSide) {
-                    // Replace water source with air
-                    world.setBlock(pos, Fluids.EMPTY.defaultFluidState().createLegacyBlock(), 3);
 
-                    // Play sound at the block position
+                    world.setBlock(pos, Fluids.EMPTY.defaultFluidState().createLegacyBlock(), 3);
                     world.playSound(null, pos, SoundEvents.SPONGE_ABSORB, SoundSource.PLAYERS, 1.0F, 1.0F);
 
-                    // Create the transformed item
                     ItemStack transformedItem = new ItemStack(transformItem);
 
-                    // Try to add to player inventory
                     if (!player.getInventory().add(transformedItem)) {
-                        // If inventory is full, drop the wet sponge on ground
                         player.drop(transformedItem, false);
                     }
-
-                    // Consume the dry sponge (unless in creative mode)
                     if (!player.isCreative()) {
                         itemStack.shrink(1);
                     }

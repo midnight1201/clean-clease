@@ -15,7 +15,6 @@
   "item.clean_n_cleanse.wet_light_blue_sponge": "Wet Light Blue Sponge",
 
 
-
   "block.clean_n_cleanse.white_sponge_block": "White Sponge Block",
   "block.clean_n_cleanse.wet_white_sponge_block": "Wet White Sponge Block",
 
@@ -27,6 +26,13 @@
 
   "block.clean_n_cleanse.light_blue_sponge_block": "Light Blue Sponge Block",
   "block.clean_n_cleanse.wet_light_blue_sponge_block": "Wet Light Blue Sponge Block",
+
+
+  "tag.block.clean_n_cleanse.sponge_blocks": "Sponge Blocks",
+  "tag.block.clean_n_cleanse.wet_sponge_blocks": "Wet Sponge Blocks",
+
+  "tag.item.clean_n_cleanse.sponge_items": "Sponge Items",
+  "tag.item.clean_n_cleanse.wet_sponge_items": "Wet Sponge Items",
 
   "creativetab.chemistrymod.mod_items": "Clean & Cleanse"
 }
