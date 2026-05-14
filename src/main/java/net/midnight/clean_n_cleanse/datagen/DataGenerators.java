@@ -1,7 +1,15 @@
 package net.midnight.clean_n_cleanse.datagen;
 
 import net.midnight.clean_n_cleanse.ChemistryMod;
+import net.midnight.clean_n_cleanse.datagen.block.ModBlockStateProvider;
+import net.midnight.clean_n_cleanse.datagen.block.ModBlockTagProvider;
+import net.midnight.clean_n_cleanse.datagen.item.ModItemModelProvider;
+import net.midnight.clean_n_cleanse.datagen.item.ModItemTagProvider;
 import net.midnight.clean_n_cleanse.datagen.recipe.*;
+import net.midnight.clean_n_cleanse.datagen.recipe.create.ModCuttingRecipeGen;
+import net.midnight.clean_n_cleanse.datagen.recipe.create.ModEmptyingRecipeGen;
+import net.midnight.clean_n_cleanse.datagen.recipe.create.ModFillingRecipeGen;
+import net.midnight.clean_n_cleanse.datagen.recipe.create.ModWashingRecipeGen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -29,7 +37,6 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new ModCompactingRecipeGen(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModFillingRecipeGen(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModEmptyingRecipeGen(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new ModCuttingRecipeGen(packOutput, lookupProvider));

@@ -26,14 +26,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.WHITE_SPONGE.get())
-                .unlockedBy("has_white_sponge", has(ModItems.WHITE_SPONGE)).save(recipeOutput, "white_sponge_block");
+                .unlockedBy("has_white_sponge", has(ModItems.WHITE_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_white_sponge_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WET_WHITE_SPONGE_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.WET_WHITE_SPONGE.get())
-                .unlockedBy("has_wet_white_sponge", has(ModItems.WET_WHITE_SPONGE)).save(recipeOutput, "wet_white_sponge_block");
+                .unlockedBy("has_wet_white_sponge", has(ModItems.WET_WHITE_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_wet_white_sponge_block");
 
         //RED
 
@@ -42,14 +42,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.RED_SPONGE.get())
-                .unlockedBy("has_red_sponge", has(ModItems.RED_SPONGE)).save(recipeOutput, "red_sponge_block");
+                .unlockedBy("has_red_sponge", has(ModItems.RED_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_red_sponge_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WET_RED_SPONGE_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.WET_RED_SPONGE.get())
-                .unlockedBy("has_wet_red_sponge", has(ModItems.WET_RED_SPONGE)).save(recipeOutput, "wet_red_sponge_block");
+                .unlockedBy("has_wet_red_sponge", has(ModItems.WET_RED_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_wet_red_sponge_block");
 
         //YELLOW
 
@@ -58,14 +58,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.YELLOW_SPONGE.get())
-                .unlockedBy("has_yellow_sponge", has(ModItems.YELLOW_SPONGE)).save(recipeOutput, "yellow_sponge_block");
+                .unlockedBy("has_yellow_sponge", has(ModItems.YELLOW_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_yellow_sponge_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.WET_SPONGE)
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.WET_YELLOW_SPONGE.get())
-                .unlockedBy("has_wet_yellow_sponge", has(ModItems.WET_YELLOW_SPONGE)).save(recipeOutput, "wet_yellow_sponge_block");
+                .unlockedBy("has_wet_yellow_sponge", has(ModItems.WET_YELLOW_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_wet_yellow_sponge_block");
 
         //LIME
 
@@ -74,14 +74,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.LIME_SPONGE.get())
-                .unlockedBy("has_lime_sponge", has(ModItems.LIME_SPONGE)).save(recipeOutput, "lime_sponge_block");
+                .unlockedBy("has_lime_sponge", has(ModItems.LIME_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_lime_sponge_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WET_LIME_SPONGE_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.WET_LIME_SPONGE.get())
-                .unlockedBy("has_wet_lime_sponge", has(ModItems.WET_LIME_SPONGE)).save(recipeOutput, "wet_lime_sponge_block");
+                .unlockedBy("has_wet_lime_sponge", has(ModItems.WET_LIME_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_wet_lime_sponge_block");
 
         //LIGHT BLUE
 
@@ -90,36 +90,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.LIGHT_BLUE_SPONGE.get())
-                .unlockedBy("has_light_blue_sponge", has(ModItems.LIGHT_BLUE_SPONGE)).save(recipeOutput, "light_blue_sponge_block");
+                .unlockedBy("has_light_blue_sponge", has(ModItems.LIGHT_BLUE_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_light_blue_sponge_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WET_LIGHT_BLUE_SPONGE_BLOCK.get())
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.WET_LIGHT_BLUE_SPONGE.get())
-                .unlockedBy("has_wet_light_blue_sponge", has(ModItems.WET_LIGHT_BLUE_SPONGE)).save(recipeOutput, "wet_light_blue_sponge_block");
+                .unlockedBy("has_wet_light_blue_sponge", has(ModItems.WET_LIGHT_BLUE_SPONGE)).save(recipeOutput, "clean_n_cleanse:craft_wet_light_blue_sponge_block");
 
         //SMELT
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.WET_WHITE_SPONGE_BLOCK.get()), RecipeCategory.MISC,
                         ModBlocks.WHITE_SPONGE_BLOCK.get(), 0.15f, 200)
                 .unlockedBy("has_wet_white_sponge", has(ModBlocks.WET_WHITE_SPONGE_BLOCK))
-                .save(recipeOutput, "smelt_white_sponge");
+                .save(recipeOutput, "clean_n_cleanse:smelt_white_sponge");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.WET_RED_SPONGE_BLOCK.get()), RecipeCategory.MISC,
                         ModBlocks.RED_SPONGE_BLOCK.get(), 0.15f, 200)
                 .unlockedBy("has_wet_red_sponge", has(ModBlocks.WET_RED_SPONGE_BLOCK))
-                .save(recipeOutput, "smelt_red_sponge");
+                .save(recipeOutput, "clean_n_cleanse:smelt_red_sponge");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.WET_LIME_SPONGE_BLOCK.get()), RecipeCategory.MISC,
                         ModBlocks.LIME_SPONGE_BLOCK.get(), 0.15f, 200)
                 .unlockedBy("has_wet_lime_sponge", has(ModBlocks.WET_LIME_SPONGE_BLOCK))
-                .save(recipeOutput, "smelt_lime_sponge");
+                .save(recipeOutput, "clean_n_cleanse:smelt_lime_sponge");
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.WET_LIGHT_BLUE_SPONGE_BLOCK.get()), RecipeCategory.MISC,
                         ModBlocks.LIGHT_BLUE_SPONGE_BLOCK.get(), 0.15f, 200)
                 .unlockedBy("has_wet_light_blue_sponge", has(ModBlocks.WET_LIGHT_BLUE_SPONGE_BLOCK))
-                .save(recipeOutput, "smelt_light_blue_sponge");
+                .save(recipeOutput, "clean_n_cleanse:smelt_light_blue_sponge");
 
     }
 
