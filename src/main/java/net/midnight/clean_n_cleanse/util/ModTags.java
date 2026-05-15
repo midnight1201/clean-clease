@@ -22,6 +22,8 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> SPONGE_ITEMS = createTag("sponge_items");
         public static final TagKey<Item> WET_SPONGE_ITEMS = createTag("wet_sponge_items");
+        public static final TagKey<Item> SPONGE_BLOCKS = createTag("sponge_blocks");
+        public static final TagKey<Item> WET_SPONGE_BLOCKS = createTag("wet_sponge_blocks");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ChemistryMod.MOD_ID, name));

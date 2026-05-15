@@ -1,12 +1,14 @@
 package net.midnight.clean_n_cleanse.datagen.item;
 
 import net.midnight.clean_n_cleanse.ChemistryMod;
+import net.midnight.clean_n_cleanse.block.ModBlocks;
 import net.midnight.clean_n_cleanse.util.ModTags;
 import net.midnight.clean_n_cleanse.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -33,5 +35,19 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.WET_YELLOW_SPONGE.get())
                 .add(ModItems.WET_LIME_SPONGE.get())
                 .add(ModItems.WET_LIGHT_BLUE_SPONGE.get());
+
+        tag(ModTags.Items.SPONGE_BLOCKS)
+                .add(ModBlocks.WHITE_SPONGE_BLOCK.get().asItem())
+                .add(ModBlocks.RED_SPONGE_BLOCK.get().asItem())
+                .add(Blocks.SPONGE.asItem())
+                .add(ModBlocks.LIME_SPONGE_BLOCK.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_SPONGE_BLOCK.get().asItem());
+
+        tag(ModTags.Items.WET_SPONGE_BLOCKS)
+                .add(ModBlocks.WET_WHITE_SPONGE_BLOCK.get().asItem())
+                .add(ModBlocks.WET_RED_SPONGE_BLOCK.get().asItem())
+                .add(Blocks.WET_SPONGE.asItem())
+                .add(ModBlocks.WET_LIME_SPONGE_BLOCK.get().asItem())
+                .add(ModBlocks.WET_LIGHT_BLUE_SPONGE_BLOCK.get().asItem());
     }
 }
