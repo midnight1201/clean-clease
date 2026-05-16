@@ -2,6 +2,7 @@ package net.midnight.clean_n_cleanse.item;
 
 import net.midnight.clean_n_cleanse.ChemistryMod;
 import net.midnight.clean_n_cleanse.item.custom.CustomSpongeItem;
+import net.midnight.clean_n_cleanse.item.custom.SpongeItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -13,7 +14,7 @@ public class ModItems {
     public static final DeferredItem<Item> WET_WHITE_SPONGE = ITEMS.register("wet_white_sponge",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> WHITE_SPONGE = ITEMS.register("white_sponge",
-            () -> new CustomSpongeItem(
+            () -> new SpongeItem(
                     new Item.Properties().stacksTo(64),
                     ModItems.WET_WHITE_SPONGE.get()));
 

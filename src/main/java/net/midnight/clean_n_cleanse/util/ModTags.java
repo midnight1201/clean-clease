@@ -16,7 +16,6 @@ public class ModTags {
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(ChemistryMod.MOD_ID, name));
         }
-
     }
 
     public static class Items {
@@ -28,7 +27,6 @@ public class ModTags {
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ChemistryMod.MOD_ID, name));
         }
-
     }
 
 }
